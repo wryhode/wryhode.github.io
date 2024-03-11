@@ -96,6 +96,24 @@ body
     font-size: 3rem;
 }
 
+.veryLargeText
+{
+    margin: 0px;
+    font-size: 5rem;
+}
+
+.kindaLargeText
+{
+    margin: 0px;
+    font-size: 3rem;
+}
+
+.removeSpacing
+{
+    padding: 0px;
+    margin: 0px;
+}
+
 #main
 {
     min-width: 70%;
@@ -133,4 +151,13 @@ body
 #navItems a
 {
     margin: 1rem;
+}
+
+#introduction
+{
+    display: flex;
+    
+    align-items: center;
+    height: 75%;
+    width: 100%;
 }
