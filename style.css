@@ -1,0 +1,136 @@
+*
+{
+    font-family: 'Share-TechMono', sans-serif;
+}
+
+a
+{
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+p
+{
+    color: white;
+    padding: 0.5rem;
+}
+
+body
+{
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.button
+{
+    border-radius: 0.5rem;
+    box-shadow: black inset 0px 0px 0.3rem;
+    text-shadow: 0px 0px 0.1rem black;
+    transition-duration: 100ms;
+
+}
+
+.button:hover
+{
+    box-shadow: black inset 0px 0px 0.1rem;
+    text-shadow: 0px 0px 0.2rem black;
+    filter: brightness(105%);
+}
+
+/* Non animating button */
+.area
+{
+    border-radius: 0.5rem;
+    box-shadow: black inset 0px 0px 0.3rem;
+    text-shadow: 0px 0px 0.1rem black;
+}
+
+.areaHighlighted
+{
+    border-radius: 0.5rem;
+    box-shadow: black inset 0px 0px 0.1rem;
+    text-shadow: 0px 0px 0.2rem black;
+    filter: brightness(105%);
+}
+
+.grayArea
+{
+    background: rgb(115,115,115);
+    background: linear-gradient(0deg, rgba(115,115,115,1) 0%, rgba(223,223,223,1) 90%, rgba(110,110,110,1) 100%);
+}
+
+.redArea
+{
+    background: rgb(203,23,23);
+    background: linear-gradient(0deg, rgba(203,23,23,1) 0%, rgba(218,143,143,1) 90%, rgba(226,70,70,1) 100%);
+    
+}
+
+.blueArea
+{
+    background: rgb(23,87,203);
+    background: linear-gradient(0deg, rgba(23,87,203,1) 0%, rgba(143,163,218,1) 90%, rgba(70,107,226,1) 100%);
+}
+
+.greenArea
+{
+    background: rgb(23,203,56);
+    background: linear-gradient(0deg, rgba(23,203,56,1) 0%, rgba(143,218,181,1) 90%, rgba(70,226,77,1) 100%);
+}
+
+.yellowArea
+{
+    background: rgb(172,203,23);
+    background: linear-gradient(0deg, rgba(172,203,23,1) 0%, rgba(224,227,162,1) 90%, rgba(202,226,70,1) 100%);
+}
+
+.localLink::before
+{
+    content: "./";
+}
+
+.headerText
+{
+    font-size: 3rem;
+}
+
+#main
+{
+    min-width: 70%;
+}
+
+#navBar
+{
+    background-color: white;
+
+    /*position: fixed;
+    top: 0;
+    width: 70%;*/
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#navHeader
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#navItems
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#navItems a
+{
+    margin: 1rem;
+}
