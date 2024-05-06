@@ -83,6 +83,7 @@ main {
 #linksContent img {
     height: 4rem;
     width: 4rem;
+    /*filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));*/
 }
 
 #construction {
@@ -122,6 +123,8 @@ main {
     box-shadow: 0px 0px 4px black;
 
     transition-duration: 250ms;
+
+    text-wrap: pretty;
 }
 
 .button:hover {
@@ -149,7 +152,7 @@ main {
     align-items: center;
     flex-wrap: wrap;
 
-    color: white;
+    color: lightgreen;
 }
 
 .linkDisplayer p {
