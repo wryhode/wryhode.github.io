@@ -1,164 +1,88 @@
-body {
-    background-color: black;
-    color: white;
+*
+{
+    font-family: 'ProggySmallTT', sans-serif;                                         
+    color: black;
+}
+
+body
+{
     margin: 0px;
-    font-family: 'Saira', sans-serif;
-    display: flex;
-    justify-content: center;
-    text-shadow: 0px 0px 2px;
+    background-color: black;
 }
 
-a {
-    color: lightgreen;
-    text-shadow: 0px 0px 3px;
-    text-decoration: none;
+h1
+{
+    font-weight: normal;
+    font-size: 4rem;
 }
 
-a:hover {
-    text-decoration:underline;
+h2
+{
+    font-weight: normal;
+    font-size: 2rem;
 }
 
-nav {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 50%));
-    align-items: center;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    
-    background: rgb(46,75,52);
-    background: linear-gradient(0deg, rgba(46,75,52,1) 0%, rgba(8,8,8,1) 100%);
-}
-
-main {
-    /*background-color: #151e17;*/
-    background-image: linear-gradient(45deg, #000000 14.29%, #151e17 14.29%, #151e17 50%, #000000 50%, #000000 64.29%, #151e17 64.29%, #151e17 100%);
-    background-size: 9.90px 9.90px;
-    display: flex;
-}
-
-#container {
-    /*border: white dashed 2px;*/
-    width: 100%;
-    max-width: 75%;
-}
-
-#navLeft {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#navRight {
-    display: flex;
-    justify-content: space-around;
-}
-
-#aboutTitle h1 {
-    margin-left: 1rem;
-}
-
-#linksGrid {
-    width: 100%;
-    /*height: 100%;*/
-    display: grid;
-    grid-template-columns: 25% 75%;
-    grid-template-rows: 15% 85%;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-
-#linksTitle h1 {
-    margin-left: 1rem;
-}
-
-#blogTitle h1 {
-    margin-left: 1rem;
-}
-
-#showoffTitle h1 {
-    margin-left: 1rem;
-}
-
-#linksContent img {
-    height: 4rem;
-    width: 4rem;
-    /*filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));*/
-}
-
-#construction {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-shadow: 0px 0px 3px black;
-
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-
-    background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    #fffb00 10px,
-    #b6c216 20px
-  ),
-  /* on "bottom" */
-    linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6222864145658263) 85%, rgba(255,255,255,0) 100%);
-}
-
-#realFooter {
-    color: #888;
-    opacity: 0.5;
-}
-
-.button {
-    width: 100%;
-    text-align: center;
-    margin: 2%;
-    border-radius: 1rem;
-
-    background: rgb(106,106,106);
-    background: linear-gradient(180deg, rgba(106,106,106,1) 0%, rgba(19,19,19,1) 100%);
-
-    box-shadow: 0px 0px 4px black;
-
-    transition-duration: 250ms;
-
-    text-wrap: pretty;
-}
-
-.button:hover {
-    background: rgb(106,106,106);
-    background: linear-gradient(0deg, rgba(106,106,106,1) 0%, rgba(19,19,19,1) 100%);
-
-    box-shadow: inset 0px 0px 4px black;
-}
-
-.gridFiller {
+#main_container
+{
     width: 100%;
     height: 100%;
-}
-
-.mainSection {
-    width: 100%;
-}
-
-.filter-white {
-    filter: invert(94%) sepia(11%) saturate(14%) hue-rotate(271deg) brightness(109%) contrast(99%);
-}
-
-.linkDisplayer {
+    background-color: black;
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+#main
+{
+    /* width gets set depending on aspect ratio and width, 60% when <= 1 and 100% when > 1 or x-resolution <= 1000 */
+    width: 100%;
+    background: rgb(209, 209, 209);
+}
+
+#welcome_title
+{
+    margin: 1rem;
+}
+
+#actual_content_container
+{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#top_nav
+{
+
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    border-radius: 25rem;
     flex-wrap: wrap;
-
-    color: lightgreen;
 }
 
-.linkDisplayer p {
-    margin-left: 4%;
+.top_nav_link
+{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 25rem;
+
+    background-color:rgb(197, 190, 190);
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.dirtySpacer {
-    margin-bottom: 4%;
+.top_nav_link:hover
+{
+    rotate: 5deg; 
+}
+
+.fancy_line_separator
+{
+    height: 1px;
+    background-color: black;
 }
