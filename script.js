@@ -19,4 +19,11 @@ function main()
     sizeStyling();
 }
 
+function removeLoading()
+{
+    let loadingContainer = document.getElementById("loading_container");
+    loadingContainer.parentNode.removeChild(loadingContainer);
+}
+
 window.addEventListener("resize", sizeStyling);
+window.addEventListener("load", removeLoading);

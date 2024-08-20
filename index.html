@@ -10,6 +10,9 @@
 </head>
 <!-- hello! -->
 <body onload="main()">
+    <div id="loading_container">
+        <p>Loading...</p>
+    </div>
     <div id="sketch_container"></div>
     <div id="main_container">
         <div id="main">
@@ -21,7 +24,7 @@
                 <div class="fancy_line_separator"></div>
                 <div id="top_nav">
                     <a href="https://github.com/wryhode" class="top_nav_link enter_zoom_trigger">GitHub</a>
-                    <a href="https://www.youtube.com/@greenspace." class="top_nav_link enter_zoom_trigger">YouTube</a>
+                    <a href="https://www.youtube.com/@greenspace." class="top_nav_link enter_zoom_trigger" id="youtubeButton">YouTube</a>
                     <a href="" class="top_nav_link enter_zoom_trigger">LinkedIn</a>
                     <a href="" class="top_nav_link enter_zoom_trigger">LinkedIn</a>
                 </div>
@@ -37,8 +40,8 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
     <script src="/p5js/p5.min.js"></script>
     <script src="/p5js/sketch.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

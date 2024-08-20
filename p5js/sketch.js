@@ -1,4 +1,6 @@
 
+const youtubeButton = document.getElementById("youtubeButton")
+
 const phi = Math.PI * (Math.sqrt(5) - 1)
 
 elements = document.getElementsByClassName("enter_zoom_trigger");
@@ -73,6 +75,15 @@ let shape;
 
 let githubLogoImageData;
 let youtubeLogoImageData;
+let showYoutubeLogo = false;
+
+youtubeButton.onmouseenter = function() {
+    showYoutubeLogo = true;
+}
+
+youtubeButton.onmouseleave = function() {
+    showYoutubeLogo = false;
+}
 
 function preload() {
     githubLogoImageData = loadImage("./p5js/assets/githublogo_.png"); 
@@ -99,8 +110,8 @@ function setup() {
     normMouseY = 0.5;
     pointScale = 0;
     pointScaleTarget = 1;
-    
-    // Inform user of loading here, also do loading stuff
+
+    // Inform user of loading here, also do loading stuffx
     
     points = distributePoints(1024);
     youtubeLogoImageData.loadPixels();
@@ -122,7 +133,7 @@ function setup() {
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
- 
+
 function draw() {
     background(209);
 
@@ -142,20 +153,22 @@ function draw() {
     }
     camera.lookAt(rotX, rotY, 0);
     
-    /*push();
-    rotateY(Math.sin(radians(frameCount)) + Math.PI);
-    fill(240, 200, 100);
-    for(let i = 0; i < youtubeLogoImageData.pixels.length; i = i + 4) {
-        if (youtubeLogoImageData.pixels[i] > 0) {
-            push();
-            translate((i % 128) - 64, (i / 32) - 64, 0);
-            let s = Math.pow(Math.sin(radians(frameCount * 5 + (i % 128) * 2)), 3);
-            translate(0, (s > 0) ? 0 : s * 10, 0);
-            box(3);
-            pop();
+    if (showYoutubeLogo) {
+        push();
+        rotateY(Math.sin(radians(frameCount)) + Math.PI);
+        fill(240, 200, 100);
+        for(let i = 0; i < youtubeLogoImageData.pixels.length; i = i + 4) {
+            if (youtubeLogoImageData.pixels[i] > 0) {
+                push();
+                translate((i % 128) - 64, (i / 32) - 64, 0);
+                let s = Math.pow(Math.sin(radians(frameCount * 5 + (i % 128) * 2)), 3);
+                translate(0, (s > 0) ? 0 : s * 10, 0);
+                box(3);
+                pop();
+            }
         }
+        pop();
     }
-    pop();*/
 
     pointScale += (pointScaleTarget - pointScale) / 20;
     scale(pointScale);
